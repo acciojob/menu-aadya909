@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import Menu from './Menu';
 import '../styles/styles.css';
@@ -50,7 +48,6 @@ const menuData = [
 ];
 
 function App() {
-  const [menuItems, setMenuItems] = useState(menuData);
   const [activeCategory, setActiveCategory] = useState('All');
 
   const handleFilter = (category) => {
@@ -59,13 +56,14 @@ function App() {
 
   const filteredItems =
     activeCategory === 'All'
-      ? menuItems
-      : menuItems.filter((item) => item.category === activeCategory);
+      ? menuData
+      : menuData.filter((item) => item.category === activeCategory);
 
   return (
     <div id="main">
       <h1>Menu</h1>
       <div className="buttons">
+        <button id="filter-btn-0" onClick={() => handleFilter('All')}>All</button>
         <button id="filter-btn-1" onClick={() => handleFilter('Breakfast')}>Breakfast</button>
         <button id="filter-btn-2" onClick={() => handleFilter('Lunch')}>Lunch</button>
         <button id="filter-btn-3" onClick={() => handleFilter('Shakes')}>Shakes</button>
