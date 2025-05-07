@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Menu from './Menu';
-import '../styles/App.css';
+import '../styles/styles.css';
 
 const menuData = [
   {
