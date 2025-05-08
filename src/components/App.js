@@ -55,9 +55,7 @@ function App() {
   };
 
   const filteredItems =
-    activeCategory === 'All'
-      ? menuData
-      : menuData.filter((item) => item.category === activeCategory);
+    activeCategory === 'All'? menuData : menuData.filter((item) => item.category === activeCategory);
 
   return (
     <div id="main">
